@@ -11,16 +11,15 @@ public class Contact{
 
     @Override
     public String toString() {
-        return "Contact{" +
-                "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                ", phone_no=" + phone_no +
-                ", email='" + email + '\'' +
-                '}';
+        return "Contact :--> "+
+                "\nfirstname='" + firstname + '\'' +
+                ", \nlastname='" + lastname + '\'' +
+                ", \naddress='" + address + '\'' +
+                ", \ncity='" + city + '\'' +
+                ", \nstate='" + state + '\'' +
+                ", \nzip=" + zip +
+                ", \nphone_no=" + phone_no +
+                ", \nemail='" + email + '\'' ;
     }
 
     public Contact() {

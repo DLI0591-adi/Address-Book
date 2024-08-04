@@ -120,4 +120,8 @@ public class AddressBook {
                 contacts.remove(cont);
         }
     }
+
+    public void displayContact(String bookName) {
+        System.out.println(addressBookMap.get(bookName));
+    }
 }
