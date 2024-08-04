@@ -4,8 +4,8 @@ public class Contact{
     private String lastname;
     private String address;
     private String city;
-    private int zip;
-    private long phone_no;
+    private String zip;
+    private String phone_no;
     private String email;
     private String state;
 
@@ -22,7 +22,11 @@ public class Contact{
                 ", email='" + email + '\'' +
                 '}';
     }
-    public Contact(String firstname, String lastname, String address, String city, String state, int zip, long phone_no, String email) {
+
+    public Contact() {
+    }
+
+    public Contact(String firstname, String lastname, String address, String city, String state, String zip, String phone_no, String email) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
@@ -73,19 +77,19 @@ public class Contact{
         this.state = state;
     }
 
-    public int getZip() {
+    public String getZip() {
         return zip;
     }
 
-    public void setZip(int zip) {
+    public void setZip(String zip) {
         this.zip = zip;
     }
 
-    public long getPhone_no() {
+    public String getPhone_no() {
         return phone_no;
     }
 
-    public void setPhone_no(long phone_no) {
+    public void setPhone_no(String phone_no) {
         this.phone_no = phone_no;
     }
 
