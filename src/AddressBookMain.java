@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class AddressBookMain {
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book program");
+        System.out.println("------------------------------\n");
         Scanner sc=new Scanner(System.in);
         AddressBook addressBook = new AddressBook();
         boolean flag=true;
