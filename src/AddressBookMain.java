@@ -10,6 +10,7 @@ public class AddressBookMain {
         do{
             System.out.println("1 to create a AddressBook");
             System.out.println("2 to add a Contact");
+            System.out.println("3 to Edit a Contact");
             System.out.println("0 to exit");
             int option=sc.nextInt();
             switch (option){
@@ -26,10 +27,19 @@ public class AddressBookMain {
                     break;
                 case 2:
                     System.out.print ("Enter the name of AddressBook to add contact ");
-                    String bookName1 = sc.next();
+                     bookName = sc.next();
                     sc.nextLine();
-                    if(addressBook.isPresent(bookName1)) {
-                        addressBook.addContact(bookName1);
+                    if(addressBook.isPresent(bookName)) {
+                        addressBook.addContact(bookName);
+                    }
+                    else System.out.println("AddressBook not present");
+                    break;
+                case 3:
+                    System.out.print ("Enter the name of AddressBook to edit contact ");
+                    bookName = sc.next();
+                    sc.nextLine();
+                    if(addressBook.isPresent(bookName)) {
+                        addressBook.editContact(bookName);
                     }
                     else System.out.println("AddressBook not present");
                     break;
