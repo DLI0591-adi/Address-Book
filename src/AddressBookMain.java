@@ -11,6 +11,7 @@ public class AddressBookMain {
             System.out.println("1 to create a AddressBook");
             System.out.println("2 to add a Contact");
             System.out.println("3 to Edit a Contact");
+            System.out.println("4 to delete a Contact");
             System.out.println("0 to exit");
             int option=sc.nextInt();
             switch (option){
@@ -40,6 +41,15 @@ public class AddressBookMain {
                     sc.nextLine();
                     if(addressBook.isPresent(bookName)) {
                         addressBook.editContact(bookName);
+                    }
+                    else System.out.println("AddressBook not present");
+                    break;
+                case 4:
+                    System.out.print ("Enter the name of AddressBook to delete contact ");
+                    bookName = sc.next();
+                    sc.nextLine();
+                    if(addressBook.isPresent(bookName)) {
+                        addressBook.deleteContact(bookName);
                     }
                     else System.out.println("AddressBook not present");
                     break;

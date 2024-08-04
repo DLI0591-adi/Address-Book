@@ -110,4 +110,14 @@ public class AddressBook {
         }while (flag);
         System.out.println("Contact edited!");
     }
+
+    public void deleteContact(String bookName) {
+        System.out.println("Enter the first name of the contact to be deleted: ");
+        String n = sc.next();
+        List<Contact> list = addressBookMap.get(bookName);
+        for (Contact cont : list) {
+            if (cont.getFirstname().equals(n))
+                contacts.remove(cont);
+        }
+    }
 }
